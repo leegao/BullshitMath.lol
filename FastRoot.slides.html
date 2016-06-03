@@ -23390,6 +23390,265 @@ RU5ErkJggg==
 
 </div>
 </div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The idea behind Fast Inverse Sqrt isn't hard.</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>In fact, you can write a "Fast Exponentiation" method for any arbitrary exponent!</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We're all wizards.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h2>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We didn't really talk about how people went from <code>0x5f400000</code> to <code>0x5f3759df</code>. There's a wealth of resources for this, but as a shameless plug, check out my <a href="http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/">Fast Inverse Sqrt the Easy(ish) Way</a>.</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We can generate arbitrary fast power approximations, but it would be cool to generate something along the style of the original inverse-sqrt program</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
+
+&lt;div id=&quot;meh&quot;&gt;
+&lt;small style=&quot;font-size: 8px;&quot;&gt;[Double Click for Code]&lt;/small&gt;
+&lt;style&gt;
+.hide-in-slideshow-meh {
+    display: None ! important;
+}
+&lt;/style&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var show_meh = function() {
+        var p = $(&quot;#meh&quot;);
+        var orig = p;
+        if (p.length==0) return;
+
+        while (!p.hasClass(&quot;cell&quot;)) {
+            p=p.parent();
+
+            if (p.prop(&quot;tagName&quot;) ==&quot;body&quot;) return;
+        }
+        var cell = p;
+        cell.dblclick(function() {
+          if (!orig.hasClass(&quot;hide-in-slideshow-meh&quot;)) {
+            cell.find(&quot;.input&quot;).removeClass(&quot;hide-in-slideshow-meh&quot;);
+            orig.addClass(&quot;hide-in-slideshow-meh&quot;);
+          } else {
+            cell.find(&quot;.input&quot;).addClass(&quot;hide-in-slideshow-meh&quot;);
+            orig.removeClass(&quot;hide-in-slideshow-meh&quot;);
+          }
+        });
+        cell.find(&quot;.input&quot;).addClass(&quot;hide-in-slideshow-meh&quot;);
+    }
+    show_meh();
+&lt;/script&gt;
+
+&lt;pre id=&quot;wee&quot; class=&quot;language-c cm-s-ipython highlight&quot;&gt;
+// For x^(-0.5)
+float qpow(float x) {
+  long i  = * ( long * ) &amp;x;                  
+  i  = 0x5f400000 + -0.5 * i;               
+  return * ( float * ) &amp;i;
+}
+&lt;/pre&gt;
+
+&lt;p&gt;
+&lt;input type=&quot;text&quot; id=&quot;pown&quot; val=&quot;-0.5&quot;/&gt;
+&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    require.config({
+        paths: {
+            &quot;highlight&quot;: &quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min&quot;,
+        }
+    });
+    require([&quot;highlight&quot;], function(hljs) {
+        hljs.configure({
+          classPrefix: &#39;cm-&#39;     // don&#39;t append class prefix
+        });
+            
+        $(&#39;#wee&#39;).each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+
+        $(&quot;#pown&quot;).keyup(function() {
+            var C = Number($(&quot;#pown&quot;).val());
+            if (Number.isNaN(C)) return;
+            var M = Math.floor(1065353216 * (1 - C)) % 4294967296;
+            var sign = M &gt;= 0 ? &#39;&#39; : &#39;-&#39;;
+            var code = &quot;// For x^(&quot; + C + &quot;)\nfloat qpow(float x) {\n  long i  = * ( long * ) &amp;x;\n  i  = &quot; + sign + &quot;0x&quot; + Math.abs(M).toString(16) + &quot; + &quot; + C + &quot; * i;\n  return * ( float * ) &amp;i;\n}\n&quot;;
+            $(&quot;#wee&quot;).html(code);
+            $(&#39;#wee&#39;).each(function(i, block) {
+              hljs.highlightBlock(block);
+            });
+        });
+    });
+    
+&lt;/script&gt;
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+
+<div id="meh">
+<small style="font-size: 8px;">[Double Click for Code]</small>
+<style>
+.hide-in-slideshow-meh {
+    display: None ! important;
+}
+</style>
+</div>
+
+<script type="text/javascript">
+    var show_meh = function() {
+        var p = $("#meh");
+        var orig = p;
+        if (p.length==0) return;
+
+        while (!p.hasClass("cell")) {
+            p=p.parent();
+
+            if (p.prop("tagName") =="body") return;
+        }
+        var cell = p;
+        cell.dblclick(function() {
+          if (!orig.hasClass("hide-in-slideshow-meh")) {
+            cell.find(".input").removeClass("hide-in-slideshow-meh");
+            orig.addClass("hide-in-slideshow-meh");
+          } else {
+            cell.find(".input").addClass("hide-in-slideshow-meh");
+            orig.removeClass("hide-in-slideshow-meh");
+          }
+        });
+        cell.find(".input").addClass("hide-in-slideshow-meh");
+    }
+    show_meh();
+</script>
+
+<pre id="wee" class="language-c cm-s-ipython highlight">
+// For x^(-0.5)
+float qpow(float x) {
+  long i  = * ( long * ) &x;                  
+  i  = 0x5f400000 + -0.5 * i;               
+  return * ( float * ) &i;
+}
+</pre>
+
+<p>
+<input type="text" id="pown" val="-0.5"/>
+</p>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            "highlight": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min",
+        }
+    });
+    require(["highlight"], function(hljs) {
+        hljs.configure({
+          classPrefix: 'cm-'     // don't append class prefix
+        });
+            
+        $('#wee').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+
+        $("#pown").keyup(function() {
+            var C = Number($("#pown").val());
+            if (Number.isNaN(C)) return;
+            var M = Math.floor(1065353216 * (1 - C)) % 4294967296;
+            var sign = M >= 0 ? '' : '-';
+            var code = "// For x^(" + C + ")\nfloat qpow(float x) {\n  long i  = * ( long * ) &x;\n  i  = " + sign + "0x" + Math.abs(M).toString(16) + " + " + C + " * i;\n  return * ( float * ) &i;\n}\n";
+            $("#wee").html(code);
+            $('#wee').each(function(i, block) {
+              hljs.highlightBlock(block);
+            });
+        });
+    });
+    
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div></section></section>
 </div>
 </div>
