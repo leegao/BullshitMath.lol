@@ -11847,6 +11847,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><em>Algebra, "Music Theory", and Logarithms Oh My!</em></p>
 <p>By: <a href="https://github.com/leegao">Lee</a></p>
+<p><a href="https://nbviewer.jupyter.org/github/leegao/BullshitMath.lol/blob/master/FastRoot.ipynb">Notebook View</a></p>
 <p><small><em>Press the Down button to see the motivation for this deck.</em></small></p>
 
 </div>
@@ -11857,7 +11858,9 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What's-the-point?">What's the point?<a class="anchor-link" href="#What's-the-point?">&#182;</a></h2><p>Fast Inverse Roots and its mythical constant has creeped into the mainstream programming community since its rediscovery back in 2009. However, most of the sources (including its own Wikipedia article) shed relatively little light behind the intuition behind the technique.</p>
+<h2 id="What's-the-point?">What's the point?<a class="anchor-link" href="#What's-the-point?">&#182;</a></h2><ul>
+<li>Fast Inverse Roots and its mythical constant has creeped into the mainstream programming community since its rediscovery back in 2009. However, most of the sources (including its own Wikipedia article) shed relatively little light behind the intuition behind the technique.</li>
+</ul>
 
 </div>
 </div>
@@ -11867,18 +11870,33 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What better way to understand something than to completely re-invent it from scratch. We're lucky, the method (much like Lambda Calculus) is a lot simpler and more intuitive than the hoards of papers and mysterious hexadecimal constants related to the method will have you believe.</p>
+<ul>
+<li>What better way to understand something than to completely re-invent it from scratch. We're lucky, the method (much like Lambda Calculus) is a lot simpler and more intuitive than the hoards of papers and mysterious hexadecimal constants related to the method will have you believe.</li>
+</ul>
 
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In particular, you don't need any sophisticated mathematics. You don't need group theory, you don't need calculus, you don't even need to consult the floating point manual. All you need is a bit of $8^{th}$ grade algebra, some experience with using Logarithms, and a tolerance for my completely unwarranted disfigurement of some musical notations.</p>
-<p>For a deeper dive into the subject, come check out <a href="http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/">http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/</a></p>
+<ul>
+<li>In particular, you don't need any sophisticated mathematics. You don't need group theory, you don't need calculus, you don't even need to consult the floating point manual. All you need is a bit of $8^{th}$ grade algebra, some experience with using Logarithms, and a tolerance for my completely unwarranted disfigurement of some musical notations.</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>For a deeper dive into the subject, come check out <a href="http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/">http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/</a></li>
+</ul>
 
 </div>
 </div>
@@ -11943,7 +11961,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11995,17 +12013,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="4c9a4492100bff43">
+    <div id="b48159e83621253b">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-4c9a4492100bff43 {
+        .hide-in-slideshow-b48159e83621253b {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_4c9a4492100bff43 = function() {
-            var p = $("#4c9a4492100bff43");
+        var show_b48159e83621253b = function() {
+            var p = $("#b48159e83621253b");
             var orig = p;
             if (p.length==0) return;
 
@@ -12016,17 +12034,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-4c9a4492100bff43")) {
-                cell.find(".input").removeClass("hide-in-slideshow-4c9a4492100bff43");
-                orig.addClass("hide-in-slideshow-4c9a4492100bff43");
+              if (!orig.hasClass("hide-in-slideshow-b48159e83621253b")) {
+                cell.find(".input").removeClass("hide-in-slideshow-b48159e83621253b");
+                orig.addClass("hide-in-slideshow-b48159e83621253b");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-4c9a4492100bff43");
-                orig.removeClass("hide-in-slideshow-4c9a4492100bff43");
+                cell.find(".input").addClass("hide-in-slideshow-b48159e83621253b");
+                orig.removeClass("hide-in-slideshow-b48159e83621253b");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-4c9a4492100bff43");
+            cell.find(".input").addClass("hide-in-slideshow-b48159e83621253b");
         }
-        show_4c9a4492100bff43();
+        show_b48159e83621253b();
     </script>
 </div>
 
@@ -12038,7 +12056,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[100]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
@@ -12056,7 +12074,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[101]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Construct a plot</span>
@@ -12090,6 +12108,9 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
     .reveal .output_stderr {
         display: none !important;
     }
+    .reveal .prompt {
+        color: #FFFFFF !important;
+    }
     </style>
     
 </div>
@@ -12100,17 +12121,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="bcea4a6e5c9fc992">
+    <div id="6ce81bd65c492d4d">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-bcea4a6e5c9fc992 {
+        .hide-in-slideshow-6ce81bd65c492d4d {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_bcea4a6e5c9fc992 = function() {
-            var p = $("#bcea4a6e5c9fc992");
+        var show_6ce81bd65c492d4d = function() {
+            var p = $("#6ce81bd65c492d4d");
             var orig = p;
             if (p.length==0) return;
 
@@ -12121,17 +12142,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-bcea4a6e5c9fc992")) {
-                cell.find(".input").removeClass("hide-in-slideshow-bcea4a6e5c9fc992");
-                orig.addClass("hide-in-slideshow-bcea4a6e5c9fc992");
+              if (!orig.hasClass("hide-in-slideshow-6ce81bd65c492d4d")) {
+                cell.find(".input").removeClass("hide-in-slideshow-6ce81bd65c492d4d");
+                orig.addClass("hide-in-slideshow-6ce81bd65c492d4d");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-bcea4a6e5c9fc992");
-                orig.removeClass("hide-in-slideshow-bcea4a6e5c9fc992");
+                cell.find(".input").addClass("hide-in-slideshow-6ce81bd65c492d4d");
+                orig.removeClass("hide-in-slideshow-6ce81bd65c492d4d");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-bcea4a6e5c9fc992");
+            cell.find(".input").addClass("hide-in-slideshow-6ce81bd65c492d4d");
         }
-        show_bcea4a6e5c9fc992();
+        show_6ce81bd65c492d4d();
     </script>
 </div>
 
@@ -12811,7 +12832,7 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">struct</span> <span class="k">import</span> <span class="n">pack</span><span class="p">,</span> <span class="n">unpack</span>
@@ -12841,6 +12862,9 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
     .reveal .output_stderr {
         display: none !important;
     }
+    .reveal .prompt {
+        color: #FFFFFF !important;
+    }
     </style>
     
 </div>
@@ -12851,17 +12875,17 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="1fe8d1b473e99a8d">
+    <div id="add9f3f162a06cdb">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-1fe8d1b473e99a8d {
+        .hide-in-slideshow-add9f3f162a06cdb {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_1fe8d1b473e99a8d = function() {
-            var p = $("#1fe8d1b473e99a8d");
+        var show_add9f3f162a06cdb = function() {
+            var p = $("#add9f3f162a06cdb");
             var orig = p;
             if (p.length==0) return;
 
@@ -12872,17 +12896,17 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-1fe8d1b473e99a8d")) {
-                cell.find(".input").removeClass("hide-in-slideshow-1fe8d1b473e99a8d");
-                orig.addClass("hide-in-slideshow-1fe8d1b473e99a8d");
+              if (!orig.hasClass("hide-in-slideshow-add9f3f162a06cdb")) {
+                cell.find(".input").removeClass("hide-in-slideshow-add9f3f162a06cdb");
+                orig.addClass("hide-in-slideshow-add9f3f162a06cdb");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-1fe8d1b473e99a8d");
-                orig.removeClass("hide-in-slideshow-1fe8d1b473e99a8d");
+                cell.find(".input").addClass("hide-in-slideshow-add9f3f162a06cdb");
+                orig.removeClass("hide-in-slideshow-add9f3f162a06cdb");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-1fe8d1b473e99a8d");
+            cell.find(".input").addClass("hide-in-slideshow-add9f3f162a06cdb");
         }
-        show_1fe8d1b473e99a8d();
+        show_add9f3f162a06cdb();
     </script>
 </div>
 
@@ -12894,7 +12918,7 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
@@ -13020,7 +13044,7 @@ $$</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Let's forget about the magic constant <code>𝟢𝗑𝟧𝖿𝟥𝟩𝟧𝟫𝖽𝖿</code> for a moment.</li>
+<li>Let's forget about the magic constant <code>0x5f3759df</code> for a moment.</li>
 </ul>
 
 </div>
@@ -13077,7 +13101,7 @@ $$
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foobar</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
@@ -23463,15 +23487,15 @@ RU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>We can generate arbitrary fast power approximations, but it would be cool to generate something along the style of the original inverse-sqrt program</li>
+<li>We can generate arbitrary fast power approximations, but it would be cool to generate something along the style of the original inverse-sqrt program.</li>
 </ul>
 
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[96]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
@@ -23649,7 +23673,28 @@ float qpow(float x) {
 </div>
 </div>
 
-</div></div></section></section>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Check back at <a href="http://www.bullshitmath.lol/">http://www.bullshitmath.lol/</a> for more posts in the future!</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Thanks!">Thanks!<a class="anchor-link" href="#Thanks!">&#182;</a></h1>
+</div>
+</div>
+</div></section></section>
 </div>
 </div>
 
