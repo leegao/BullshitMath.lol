@@ -14,11 +14,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
-<!--[if lt IE 9]>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
-<![endif]-->
-
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
 <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
@@ -8515,15 +8510,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box
+/* This file is a compatability layer.  It allows the usage of flexible box 
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this
+`Modern browsers` comments below).  Browsers that are known to implement this 
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+
+    Internet Explorer 11+ 
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11273,7 +11268,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for
+  /* This injects handle bars (a short, wide = symbol) for 
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11708,7 +11703,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-
+    
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11827,26 +11822,10 @@ a.anchor-link {
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-2209617-11', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
 </head>
 
 
 <body>
-<style>
-  .github-fork-ribbon::after {line-height: initial !important;padding: initial !important;}
-  .github-fork-ribbon {font-size: 14px;}
-</style>
-<a class="github-fork-ribbon" href="http://www.bullshitmath.lol" title="Bullshit Math">Bullshit Math</a>
 
 
 <div class="reveal">
@@ -11869,59 +11848,147 @@ a.anchor-link {
 <p><em>Algebra, "Music Theory", and Logarithms Oh My!</em></p>
 <p>By: <a href="https://github.com/leegao">Lee</a></p>
 <p><a href="https://nbviewer.jupyter.org/github/leegao/BullshitMath.lol/blob/master/FastRoot.ipynb">Notebook View</a></p>
-<p><small><em>Press the Down button to see the motivation for this deck.</em></small></p>
+<p><small><em>Press the Right key to navigate these slides.</em></small></p>
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="What's-the-point?">What's the point?<a class="anchor-link" href="#What's-the-point?">&#182;</a></h2><ul>
-<li>Fast Inverse Roots and its mythical constant has creeped into the mainstream programming community since its rediscovery back in 2009. However, most of the sources (including its own Wikipedia article) shed relatively little light behind the intuition behind the technique.</li>
-</ul>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">setup_html</span> <span class="o">=</span> <span class="s1">r&#39;&#39;&#39;</span>
+<span class="s1">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css&quot; /&gt;</span>
+<span class="s1">&lt;!--[if lt IE 9]&gt;</span>
+<span class="s1">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css&quot; /&gt;</span>
+<span class="s1">&lt;![endif]--&gt;</span>
+<span class="s1">&lt;script&gt;</span>
+<span class="s1">  (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){</span>
+<span class="s1">  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),</span>
+<span class="s1">  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)</span>
+<span class="s1">  })(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);</span>
+
+<span class="s1">  ga(&#39;create&#39;, &#39;UA-2209617-11&#39;, &#39;auto&#39;);</span>
+<span class="s1">  ga(&#39;send&#39;, &#39;pageview&#39;);</span>
+
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&lt;style&gt;</span>
+<span class="s1">  .github-fork-ribbon::after {line-height: initial !important;padding: initial !important;}</span>
+<span class="s1">  .github-fork-ribbon {font-size: 14px;}</span>
+<span class="s1">&lt;/style&gt;</span>
+<span class="s1">&lt;script&gt;</span>
+<span class="s1">$(document).ready(function() {</span>
+<span class="s1">    $(&quot;body&quot;).append(&#39;&lt;a class=&quot;github-fork-ribbon&quot; href=&quot;http://www.bullshitmath.lol&quot; title=&quot;Bullshit Math&quot;&gt;Bullshit Math&lt;/a&gt;&#39;)</span>
+<span class="s1">});</span>
+<span class="s1">&lt;/script&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display_html</span><span class="p">(</span><span class="n">setup_html</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">hide_code_in_slideshow</span><span class="p">()</span>
+</pre></div>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What better way to understand something than to completely re-invent it from scratch. We're lucky, the method (much like Lambda Calculus) is a lot simpler and more intuitive than the hoards of papers and mysterious hexadecimal constants related to the method will have you believe.</li>
-</ul>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2209617-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style>
+  .github-fork-ribbon::after {line-height: initial !important;padding: initial !important;}
+  .github-fork-ribbon {font-size: 14px;}
+</style>
+<script>
+$(document).ready(function() {
+    $("body").append('<a class="github-fork-ribbon" href="http://www.bullshitmath.lol" title="Bullshit Math">Bullshit Math</a>')
+});
+</script>
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+
+    <style>
+    .reveal .output_stderr {
+        display: none !important;
+    }
+    .reveal .prompt {
+        color: #FFFFFF !important;
+    }
+    </style>
+    
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+
+    <div id="77403202cf59cb2e">
+        <small style="font-size: 8px;">[Double Click for Code]</small>
+        <style>
+        .hide-in-slideshow-77403202cf59cb2e {
+            display: None ! important;
+        }
+        </style>
+    </div>
+    <script type="text/javascript">
+        var show_77403202cf59cb2e = function() {
+            var p = $("#77403202cf59cb2e");
+            var orig = p;
+            if (p.length==0) return;
+
+            while (!p.hasClass("cell")) {
+                p=p.parent();
+
+                if (p.prop("tagName") =="body") return;
+            }
+            var cell = p;
+            cell.dblclick(function() {
+              if (!orig.hasClass("hide-in-slideshow-77403202cf59cb2e")) {
+                cell.find(".input").removeClass("hide-in-slideshow-77403202cf59cb2e");
+                orig.addClass("hide-in-slideshow-77403202cf59cb2e");
+              } else {
+                cell.find(".input").addClass("hide-in-slideshow-77403202cf59cb2e");
+                orig.removeClass("hide-in-slideshow-77403202cf59cb2e");
+              }
+            });
+            cell.find(".input").addClass("hide-in-slideshow-77403202cf59cb2e");
+        }
+        show_77403202cf59cb2e();
+    </script>
+</div>
+
+</div>
 
 </div>
 </div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>In particular, you don't need any sophisticated mathematics. You don't need group theory, you don't need calculus, you don't even need to consult the floating point manual. All you need is a bit of $8^{th}$ grade algebra, some experience with using Logarithms, and a tolerance for my completely unwarranted disfigurement of some musical notations.</li>
-</ul>
 
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>For a deeper dive into the subject, come check out <a href="http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/">http://www.phailed.me/2014/10/0x5f400000-understanding-fast-inverse-sqrt-the-easyish-way/</a></li>
-</ul>
-
-</div>
-</div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -11982,7 +12049,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -12025,7 +12092,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -12034,17 +12101,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="b48159e83621253b">
+    <div id="7fc319cdec5890b4">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-b48159e83621253b {
+        .hide-in-slideshow-7fc319cdec5890b4 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_b48159e83621253b = function() {
-            var p = $("#b48159e83621253b");
+        var show_7fc319cdec5890b4 = function() {
+            var p = $("#7fc319cdec5890b4");
             var orig = p;
             if (p.length==0) return;
 
@@ -12055,17 +12122,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-b48159e83621253b")) {
-                cell.find(".input").removeClass("hide-in-slideshow-b48159e83621253b");
-                orig.addClass("hide-in-slideshow-b48159e83621253b");
+              if (!orig.hasClass("hide-in-slideshow-7fc319cdec5890b4")) {
+                cell.find(".input").removeClass("hide-in-slideshow-7fc319cdec5890b4");
+                orig.addClass("hide-in-slideshow-7fc319cdec5890b4");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-b48159e83621253b");
-                orig.removeClass("hide-in-slideshow-b48159e83621253b");
+                cell.find(".input").addClass("hide-in-slideshow-7fc319cdec5890b4");
+                orig.removeClass("hide-in-slideshow-7fc319cdec5890b4");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-b48159e83621253b");
+            cell.find(".input").addClass("hide-in-slideshow-7fc319cdec5890b4");
         }
-        show_b48159e83621253b();
+        show_7fc319cdec5890b4();
     </script>
 </div>
 
@@ -12077,7 +12144,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[100]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
@@ -12095,7 +12162,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[101]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Construct a plot</span>
@@ -12133,7 +12200,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -12142,17 +12209,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="6ce81bd65c492d4d">
+    <div id="2936aa33449a9d7d">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-6ce81bd65c492d4d {
+        .hide-in-slideshow-2936aa33449a9d7d {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_6ce81bd65c492d4d = function() {
-            var p = $("#6ce81bd65c492d4d");
+        var show_2936aa33449a9d7d = function() {
+            var p = $("#2936aa33449a9d7d");
             var orig = p;
             if (p.length==0) return;
 
@@ -12163,17 +12230,17 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-6ce81bd65c492d4d")) {
-                cell.find(".input").removeClass("hide-in-slideshow-6ce81bd65c492d4d");
-                orig.addClass("hide-in-slideshow-6ce81bd65c492d4d");
+              if (!orig.hasClass("hide-in-slideshow-2936aa33449a9d7d")) {
+                cell.find(".input").removeClass("hide-in-slideshow-2936aa33449a9d7d");
+                orig.addClass("hide-in-slideshow-2936aa33449a9d7d");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-6ce81bd65c492d4d");
-                orig.removeClass("hide-in-slideshow-6ce81bd65c492d4d");
+                cell.find(".input").addClass("hide-in-slideshow-2936aa33449a9d7d");
+                orig.removeClass("hide-in-slideshow-2936aa33449a9d7d");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-6ce81bd65c492d4d");
+            cell.find(".input").addClass("hide-in-slideshow-2936aa33449a9d7d");
         }
-        show_6ce81bd65c492d4d();
+        show_2936aa33449a9d7d();
     </script>
 </div>
 
@@ -12774,8 +12841,8 @@ AAAAABCBAAAAAAAAiEAAAAAAAAAk/T+LdCG6JLh6QQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Recall that the fast inverse square root method looks like</p>
-<div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">i</span>  <span class="o">=</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">long</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
-<span class="n">i</span>  <span class="o">=</span> <span class="mh">0x5f3759df</span> <span class="o">-</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span> <span class="p">);</span>
+<div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">i</span>  <span class="o">=</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">long</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>                  
+<span class="n">i</span>  <span class="o">=</span> <span class="mh">0x5f3759df</span> <span class="o">-</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span> <span class="p">);</span>               
 <span class="k">return</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">float</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </pre></div>
 
@@ -12854,7 +12921,7 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">struct</span> <span class="k">import</span> <span class="n">pack</span><span class="p">,</span> <span class="n">unpack</span>
@@ -12888,7 +12955,7 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -12897,17 +12964,17 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="add9f3f162a06cdb">
+    <div id="98a95a8127b68015">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-add9f3f162a06cdb {
+        .hide-in-slideshow-98a95a8127b68015 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_add9f3f162a06cdb = function() {
-            var p = $("#add9f3f162a06cdb");
+        var show_98a95a8127b68015 = function() {
+            var p = $("#98a95a8127b68015");
             var orig = p;
             if (p.length==0) return;
 
@@ -12918,17 +12985,17 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-add9f3f162a06cdb")) {
-                cell.find(".input").removeClass("hide-in-slideshow-add9f3f162a06cdb");
-                orig.addClass("hide-in-slideshow-add9f3f162a06cdb");
+              if (!orig.hasClass("hide-in-slideshow-98a95a8127b68015")) {
+                cell.find(".input").removeClass("hide-in-slideshow-98a95a8127b68015");
+                orig.addClass("hide-in-slideshow-98a95a8127b68015");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-add9f3f162a06cdb");
-                orig.removeClass("hide-in-slideshow-add9f3f162a06cdb");
+                cell.find(".input").addClass("hide-in-slideshow-98a95a8127b68015");
+                orig.removeClass("hide-in-slideshow-98a95a8127b68015");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-add9f3f162a06cdb");
+            cell.find(".input").addClass("hide-in-slideshow-98a95a8127b68015");
         }
-        show_add9f3f162a06cdb();
+        show_98a95a8127b68015();
     </script>
 </div>
 
@@ -12940,7 +13007,7 @@ $$<p>In a way, you can think of a <code>float</code> as a "halftone" up from a <
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@np</span><span class="o">.</span><span class="n">vectorize</span>
@@ -13023,7 +13090,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[174]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span> <span class="n">flat</span><span class="p">(</span><span class="n">sharp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">sharp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span> <span class="p">)</span> <span class="c1"># 1 + 1 is ...</span>
@@ -13037,7 +13104,7 @@ $$
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[174]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -13122,7 +13189,7 @@ $$
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foobar</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
@@ -13163,7 +13230,7 @@ $$\begin{align*}
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
@@ -13191,10 +13258,10 @@ $$\begin{align*}
         <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;For slope C = $</span><span class="si">%s</span><span class="s1">$, ${\rm foobar}_{M,</span><span class="si">%s</span><span class="s1">}(x)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span>
+        <span class="n">handles</span><span class="p">,</span> 
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
-            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span>
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
+            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span> 
             <span class="s1">r&#39;$M = 2^</span><span class="si">{28}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = {\rm 0x5f3759df}$&#39;</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -13226,8 +13293,11 @@ $$\begin{align*}
     .reveal .output_stderr {
         display: none !important;
     }
+    .reveal .prompt {
+        color: #FFFFFF !important;
+    }
     </style>
-
+    
 </div>
 
 </div>
@@ -13236,17 +13306,17 @@ $$\begin{align*}
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="ae937744b9e48105">
+    <div id="fdbd1e249a1e4f14">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-ae937744b9e48105 {
+        .hide-in-slideshow-fdbd1e249a1e4f14 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_ae937744b9e48105 = function() {
-            var p = $("#ae937744b9e48105");
+        var show_fdbd1e249a1e4f14 = function() {
+            var p = $("#fdbd1e249a1e4f14");
             var orig = p;
             if (p.length==0) return;
 
@@ -13257,17 +13327,17 @@ $$\begin{align*}
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-ae937744b9e48105")) {
-                cell.find(".input").removeClass("hide-in-slideshow-ae937744b9e48105");
-                orig.addClass("hide-in-slideshow-ae937744b9e48105");
+              if (!orig.hasClass("hide-in-slideshow-fdbd1e249a1e4f14")) {
+                cell.find(".input").removeClass("hide-in-slideshow-fdbd1e249a1e4f14");
+                orig.addClass("hide-in-slideshow-fdbd1e249a1e4f14");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-ae937744b9e48105");
-                orig.removeClass("hide-in-slideshow-ae937744b9e48105");
+                cell.find(".input").addClass("hide-in-slideshow-fdbd1e249a1e4f14");
+                orig.removeClass("hide-in-slideshow-fdbd1e249a1e4f14");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-ae937744b9e48105");
+            cell.find(".input").addClass("hide-in-slideshow-fdbd1e249a1e4f14");
         }
-        show_ae937744b9e48105();
+        show_fdbd1e249a1e4f14();
     </script>
 </div>
 
@@ -14157,7 +14227,7 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -14188,10 +14258,10 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
         <span class="n">handles</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;For slope C = $</span><span class="si">%s</span><span class="s1">$, ${\rm foobar}_{M,</span><span class="si">%s</span><span class="s1">}(x)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span>
+        <span class="n">handles</span><span class="p">,</span> 
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
-            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span>
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
+            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span> 
             <span class="s1">r&#39;$M = 2^</span><span class="si">{28}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = {\rm 0x5f3759df}$&#39;</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -14232,8 +14302,11 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
     .reveal .output_stderr {
         display: none !important;
     }
+    .reveal .prompt {
+        color: #FFFFFF !important;
+    }
     </style>
-
+    
 </div>
 
 </div>
@@ -14242,17 +14315,17 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="f146ff515a289d07">
+    <div id="1941b86e7432772c">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-f146ff515a289d07 {
+        .hide-in-slideshow-1941b86e7432772c {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_f146ff515a289d07 = function() {
-            var p = $("#f146ff515a289d07");
+        var show_1941b86e7432772c = function() {
+            var p = $("#1941b86e7432772c");
             var orig = p;
             if (p.length==0) return;
 
@@ -14263,17 +14336,17 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-f146ff515a289d07")) {
-                cell.find(".input").removeClass("hide-in-slideshow-f146ff515a289d07");
-                orig.addClass("hide-in-slideshow-f146ff515a289d07");
+              if (!orig.hasClass("hide-in-slideshow-1941b86e7432772c")) {
+                cell.find(".input").removeClass("hide-in-slideshow-1941b86e7432772c");
+                orig.addClass("hide-in-slideshow-1941b86e7432772c");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-f146ff515a289d07");
-                orig.removeClass("hide-in-slideshow-f146ff515a289d07");
+                cell.find(".input").addClass("hide-in-slideshow-1941b86e7432772c");
+                orig.removeClass("hide-in-slideshow-1941b86e7432772c");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-f146ff515a289d07");
+            cell.find(".input").addClass("hide-in-slideshow-1941b86e7432772c");
         }
-        show_f146ff515a289d07();
+        show_1941b86e7432772c();
     </script>
 </div>
 
@@ -14289,7 +14362,7 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[171]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <video width="1008.0" height="576.0" controls autoplay loop>
@@ -21786,7 +21859,7 @@ $$</p>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What is 1#?</span>
@@ -21794,7 +21867,7 @@ $$</p>
 
 <span class="c1"># What about inverse square-root?</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">r&#39;For the inverse square-root, its magical constant should be </span><span class="se">\</span>
-<span class="s1">  $$\left(1 - \frac{-1}</span><span class="si">{2}</span><span class="s1">\right)1^\sharp = \textsf{</span><span class="si">%s</span><span class="s1">}$$&#39;</span>
+<span class="s1">  $$\left(1 - \frac{-1}</span><span class="si">{2}</span><span class="s1">\right)1^\sharp = \textsf{</span><span class="si">%s</span><span class="s1">}$$&#39;</span> 
               <span class="o">%</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">sharp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)))</span>
 
 <span class="n">hide_code_in_slideshow</span><span class="p">()</span>
@@ -21838,7 +21911,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -21847,17 +21920,17 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="682edb41060304e8">
+    <div id="8049c936ceba07e7">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-682edb41060304e8 {
+        .hide-in-slideshow-8049c936ceba07e7 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_682edb41060304e8 = function() {
-            var p = $("#682edb41060304e8");
+        var show_8049c936ceba07e7 = function() {
+            var p = $("#8049c936ceba07e7");
             var orig = p;
             if (p.length==0) return;
 
@@ -21868,17 +21941,17 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-682edb41060304e8")) {
-                cell.find(".input").removeClass("hide-in-slideshow-682edb41060304e8");
-                orig.addClass("hide-in-slideshow-682edb41060304e8");
+              if (!orig.hasClass("hide-in-slideshow-8049c936ceba07e7")) {
+                cell.find(".input").removeClass("hide-in-slideshow-8049c936ceba07e7");
+                orig.addClass("hide-in-slideshow-8049c936ceba07e7");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-682edb41060304e8");
-                orig.removeClass("hide-in-slideshow-682edb41060304e8");
+                cell.find(".input").addClass("hide-in-slideshow-8049c936ceba07e7");
+                orig.removeClass("hide-in-slideshow-8049c936ceba07e7");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-682edb41060304e8");
+            cell.find(".input").addClass("hide-in-slideshow-8049c936ceba07e7");
         }
-        show_682edb41060304e8();
+        show_8049c936ceba07e7();
     </script>
 </div>
 
@@ -21912,7 +21985,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">qexp</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
@@ -21943,7 +22016,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
@@ -21963,9 +22036,9 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
     <span class="c1"># axarr[key].set_title(r&#39;For slope C = $%s$, ${\rm foobar}_{M,%s}(x)$&#39; % (C, C))</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span>
+        <span class="n">handles</span><span class="p">,</span> 
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
             <span class="s1">r&#39;$M^* = $ </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">hex</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">C</span> <span class="o">*</span> <span class="n">sharp</span><span class="p">(</span><span class="mi">1</span><span class="p">))),</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
@@ -21992,7 +22065,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -22001,17 +22074,17 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="5b2eb1f52df54beb">
+    <div id="426c9ba0544e2b14">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-5b2eb1f52df54beb {
+        .hide-in-slideshow-426c9ba0544e2b14 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_5b2eb1f52df54beb = function() {
-            var p = $("#5b2eb1f52df54beb");
+        var show_426c9ba0544e2b14 = function() {
+            var p = $("#426c9ba0544e2b14");
             var orig = p;
             if (p.length==0) return;
 
@@ -22022,17 +22095,17 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-5b2eb1f52df54beb")) {
-                cell.find(".input").removeClass("hide-in-slideshow-5b2eb1f52df54beb");
-                orig.addClass("hide-in-slideshow-5b2eb1f52df54beb");
+              if (!orig.hasClass("hide-in-slideshow-426c9ba0544e2b14")) {
+                cell.find(".input").removeClass("hide-in-slideshow-426c9ba0544e2b14");
+                orig.addClass("hide-in-slideshow-426c9ba0544e2b14");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-5b2eb1f52df54beb");
-                orig.removeClass("hide-in-slideshow-5b2eb1f52df54beb");
+                cell.find(".input").addClass("hide-in-slideshow-426c9ba0544e2b14");
+                orig.removeClass("hide-in-slideshow-426c9ba0544e2b14");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-5b2eb1f52df54beb");
+            cell.find(".input").addClass("hide-in-slideshow-426c9ba0544e2b14");
         }
-        show_5b2eb1f52df54beb();
+        show_426c9ba0544e2b14();
     </script>
 </div>
 
@@ -22709,7 +22782,7 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[216]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
@@ -22728,7 +22801,7 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
     <span class="n">handle</span><span class="p">,</span> <span class="o">=</span> <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">C</span> <span class="o">-</span> <span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">C</span><span class="p">));</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;Relative error for $x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">)</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">handle</span><span class="p">],</span>
+        <span class="p">[</span><span class="n">handle</span><span class="p">],</span> 
         <span class="p">[</span><span class="s1">r&#39;Relative error for $x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">])</span>
 
 <span class="n">hide_code_in_slideshow</span><span class="p">()</span>
@@ -22754,7 +22827,7 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
         color: #FFFFFF !important;
     }
     </style>
-
+    
 </div>
 
 </div>
@@ -22763,17 +22836,17 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="479d41ff27f83611">
+    <div id="964e802214966310">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-479d41ff27f83611 {
+        .hide-in-slideshow-964e802214966310 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_479d41ff27f83611 = function() {
-            var p = $("#479d41ff27f83611");
+        var show_964e802214966310 = function() {
+            var p = $("#964e802214966310");
             var orig = p;
             if (p.length==0) return;
 
@@ -22784,17 +22857,17 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-479d41ff27f83611")) {
-                cell.find(".input").removeClass("hide-in-slideshow-479d41ff27f83611");
-                orig.addClass("hide-in-slideshow-479d41ff27f83611");
+              if (!orig.hasClass("hide-in-slideshow-964e802214966310")) {
+                cell.find(".input").removeClass("hide-in-slideshow-964e802214966310");
+                orig.addClass("hide-in-slideshow-964e802214966310");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-479d41ff27f83611");
-                orig.removeClass("hide-in-slideshow-479d41ff27f83611");
+                cell.find(".input").addClass("hide-in-slideshow-964e802214966310");
+                orig.removeClass("hide-in-slideshow-964e802214966310");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-479d41ff27f83611");
+            cell.find(".input").addClass("hide-in-slideshow-964e802214966310");
         }
-        show_479d41ff27f83611();
+        show_964e802214966310();
     </script>
 </div>
 
@@ -23516,7 +23589,7 @@ RU5ErkJggg==
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">html</span>
@@ -23559,8 +23632,8 @@ RU5ErkJggg==
 &lt;pre id=&quot;wee&quot; class=&quot;language-c cm-s-ipython highlight&quot;&gt;
 // For x^(-0.5)
 float qpow(float x) {
-  long i  = * ( long * ) &amp;x;
-  i  = 0x5f400000 + -0.5 * i;
+  long i  = * ( long * ) &amp;x;                  
+  i  = 0x5f400000 + -0.5 * i;               
   return * ( float * ) &amp;i;
 }
 &lt;/pre&gt;
@@ -23578,7 +23651,7 @@ float qpow(float x) {
         hljs.configure({
           classPrefix: &#39;cm-&#39;     // don&#39;t append class prefix
         });
-
+            
         $(&#39;#wee&#39;).each(function(i, block) {
           hljs.highlightBlock(block);
         });
@@ -23595,7 +23668,7 @@ float qpow(float x) {
             });
         });
     });
-
+    
 &lt;/script&gt;
 </pre></div>
 
@@ -23649,8 +23722,8 @@ float qpow(float x) {
 <pre id="wee" class="language-c cm-s-ipython highlight">
 // For x^(-0.5)
 float qpow(float x) {
-  long i  = * ( long * ) &x;
-  i  = 0x5f400000 + -0.5 * i;
+  long i  = * ( long * ) &x;                  
+  i  = 0x5f400000 + -0.5 * i;               
   return * ( float * ) &i;
 }
 </pre>
@@ -23668,7 +23741,7 @@ float qpow(float x) {
         hljs.configure({
           classPrefix: 'cm-'     // don't append class prefix
         });
-
+            
         $('#wee').each(function(i, block) {
           hljs.highlightBlock(block);
         });
@@ -23685,7 +23758,7 @@ float qpow(float x) {
             });
         });
     });
-
+    
 </script>
 </div>
 
@@ -23713,6 +23786,42 @@ float qpow(float x) {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Thanks!">Thanks!<a class="anchor-link" href="#Thanks!">&#182;</a></h1>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Appendix:-What's-the-point?">Appendix: What's the point?<a class="anchor-link" href="#Appendix:-What's-the-point?">&#182;</a></h2><ul>
+<li>Fast Inverse Roots and its mythical constant has creeped into the mainstream programming community since its rediscovery back in 2009. However, most of the sources (including its own Wikipedia article) shed relatively little light behind the intuition behind the technique.</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>What better way to understand something than to completely re-invent it from scratch. We're lucky, the method (much like Lambda Calculus) is a lot simpler and more intuitive than the hoards of papers and mysterious hexadecimal constants related to the method will have you believe.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>In particular, you don't need any sophisticated mathematics. You don't need group theory, you don't need calculus, you don't even need to consult the floating point manual. All you need is a bit of $8^{th}$ grade algebra, some experience with using Logarithms, and a tolerance for my completely unwarranted disfigurement of some musical notations.</li>
+</ul>
+
 </div>
 </div>
 </div></section></section>
