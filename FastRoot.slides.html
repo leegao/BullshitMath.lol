@@ -23854,6 +23854,8 @@ require(
             ]
         });
 
+        Reveal.configure({ slideNumber: 'c/t' });
+
         var update = function(event){
           if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
             MathJax.Hub.Rerender(Reveal.getCurrentSlide());
