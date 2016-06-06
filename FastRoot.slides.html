@@ -8510,15 +8510,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11268,7 +11268,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11703,7 +11703,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11855,7 +11855,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">setup_html</span> <span class="o">=</span> <span class="s1">r&#39;&#39;&#39;</span>
@@ -11876,6 +11876,9 @@ a.anchor-link {
 <span class="s1">&lt;style&gt;</span>
 <span class="s1">  .github-fork-ribbon::after {line-height: initial !important;padding: initial !important;}</span>
 <span class="s1">  .github-fork-ribbon {font-size: 14px;}</span>
+<span class="s1">  .navigate-up, .navigate-down {</span>
+<span class="s1">      display: none !important;</span>
+<span class="s1">  }</span>
 <span class="s1">&lt;/style&gt;</span>
 <span class="s1">&lt;script&gt;</span>
 <span class="s1">$(document).ready(function() {</span>
@@ -11916,6 +11919,9 @@ a.anchor-link {
 <style>
   .github-fork-ribbon::after {line-height: initial !important;padding: initial !important;}
   .github-fork-ribbon {font-size: 14px;}
+  .navigate-up, .navigate-down {
+      display: none !important;
+  }
 </style>
 <script>
 $(document).ready(function() {
@@ -11939,7 +11945,7 @@ $(document).ready(function() {
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -11948,17 +11954,17 @@ $(document).ready(function() {
 
 <div class="output_html rendered_html output_subarea ">
 
-    <div id="32fe928fbb472727">
+    <div id="be8eebc3341f8a15">
         <small style="font-size: 8px;">[Double Click for Code]</small>
         <style>
-        .hide-in-slideshow-32fe928fbb472727 {
+        .hide-in-slideshow-be8eebc3341f8a15 {
             display: None ! important;
         }
         </style>
     </div>
     <script type="text/javascript">
-        var show_32fe928fbb472727 = function() {
-            var p = $("#32fe928fbb472727");
+        var show_be8eebc3341f8a15 = function() {
+            var p = $("#be8eebc3341f8a15");
             var orig = p;
             if (p.length==0) return;
 
@@ -11969,17 +11975,17 @@ $(document).ready(function() {
             }
             var cell = p;
             cell.dblclick(function() {
-              if (!orig.hasClass("hide-in-slideshow-32fe928fbb472727")) {
-                cell.find(".input").removeClass("hide-in-slideshow-32fe928fbb472727");
-                orig.addClass("hide-in-slideshow-32fe928fbb472727");
+              if (!orig.hasClass("hide-in-slideshow-be8eebc3341f8a15")) {
+                cell.find(".input").removeClass("hide-in-slideshow-be8eebc3341f8a15");
+                orig.addClass("hide-in-slideshow-be8eebc3341f8a15");
               } else {
-                cell.find(".input").addClass("hide-in-slideshow-32fe928fbb472727");
-                orig.removeClass("hide-in-slideshow-32fe928fbb472727");
+                cell.find(".input").addClass("hide-in-slideshow-be8eebc3341f8a15");
+                orig.removeClass("hide-in-slideshow-be8eebc3341f8a15");
               }
             });
-            cell.find(".input").addClass("hide-in-slideshow-32fe928fbb472727");
+            cell.find(".input").addClass("hide-in-slideshow-be8eebc3341f8a15");
         }
-        show_32fe928fbb472727();
+        show_be8eebc3341f8a15();
     </script>
 </div>
 
@@ -12092,7 +12098,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -12200,7 +12206,7 @@ and the secret is unlocked behind this impenetrable magical constant <strong><co
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -12841,8 +12847,8 @@ AAAAABCBAAAAAAAAiEAAAAAAAAAk/T+LdCG6JLh6QQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Recall that the fast inverse square root method looks like</p>
-<div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">i</span>  <span class="o">=</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">long</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>                  
-<span class="n">i</span>  <span class="o">=</span> <span class="mh">0x5f3759df</span> <span class="o">-</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span> <span class="p">);</span>               
+<div class="highlight"><pre><span></span><span class="kt">long</span> <span class="n">i</span>  <span class="o">=</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">long</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+<span class="n">i</span>  <span class="o">=</span> <span class="mh">0x5f3759df</span> <span class="o">-</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span> <span class="p">);</span>
 <span class="k">return</span> <span class="o">*</span> <span class="p">(</span> <span class="kt">float</span> <span class="o">*</span> <span class="p">)</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">;</span>
 </pre></div>
 
@@ -12874,7 +12880,8 @@ $$
 $$
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></div></section></section>
+<section data-transition="slide-in fade-out"><section data-transition="slide-in fade-out">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12883,13 +12890,15 @@ $$
 <p><img src="http://i.imgur.com/KgLwu8O.png" style="margin-left:auto;margin-right:auto;"/></p>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section></section>
+
+<section data-transition="slide-out fade-in"><section data-transition="slide-out fade-in">
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="http://i.imgur.com/cfDeVpO.png?1" style="margin-left:auto;margin-right:auto;"/></p>
+<p><p id="conv123"><img src="http://i.imgur.com/cfDeVpO.png?1" style="margin-left:auto;margin-right:auto;"/></p></p>
 </div>
 </div>
 </div></section></section><section><section>
@@ -12939,7 +12948,7 @@ $$
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -13039,11 +13048,11 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Inverse Laws:$$
-\textsf{f2l}(\textsf{l2f}(x)) = x = \textsf{l2f}(\textsf{f2l}(x))
-$$
-<sub><em>e.g. If you convert a float to a long and then conver that long back to a float, you get the same float back.</em></sub></li>
+<li>Inverse Laws:</li>
 </ul>
+$$
+\textsf{f2l}(\textsf{l2f}(x)) = x = \textsf{l2f}(\textsf{f2l}(x))
+$$<p><sub><small><em>e.g. If you convert a float to a long and then convert that long back to a float, you get the same float back.</em></small></sub></p>
 
 </div>
 </div>
@@ -13058,7 +13067,7 @@ $$
 </ul>
 $$
 \textsf{f2l}(0) = 0 = \textsf{l2f}(0)
-$$<p><sub><small>e.g. If you convert 0 from a float to a long, it's still 0.</small></sub></p>
+$$<p><sub><small><em>e.g. If you convert 0 from a float to a long, it's still 0.</em></small></sub></p>
 
 </div>
 </div>
@@ -13244,10 +13253,10 @@ $$\begin{align*}
         <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;For slope C = $</span><span class="si">%s</span><span class="s1">$, ${\rm foobar}_{M,</span><span class="si">%s</span><span class="s1">}(x)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span> 
+        <span class="n">handles</span><span class="p">,</span>
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
-            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span> 
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
+            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = 2^</span><span class="si">{28}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = {\rm 0x5f3759df}$&#39;</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -13283,7 +13292,7 @@ $$\begin{align*}
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -14244,10 +14253,10 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
         <span class="n">handles</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;For slope C = $</span><span class="si">%s</span><span class="s1">$, ${\rm foobar}_{M,</span><span class="si">%s</span><span class="s1">}(x)$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span> 
+        <span class="n">handles</span><span class="p">,</span>
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
-            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span> 
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
+            <span class="s1">r&#39;$M = 2^</span><span class="si">{26}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = 2^</span><span class="si">{28}</span><span class="s1">$&#39;</span><span class="p">,</span>
             <span class="s1">r&#39;$M = {\rm 0x5f3759df}$&#39;</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
@@ -14292,7 +14301,7 @@ IYRwSVIMCSGEEEIIIVySFENCCCGEEEIIl/T/AW4F2aLuq6T/AAAAAElFTkSuQmCC
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -21850,7 +21859,7 @@ $$
 
 <span class="c1"># What about inverse square-root?</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Latex</span><span class="p">(</span><span class="s1">r&#39;For the inverse square-root, its magical constant should be </span><span class="se">\</span>
-<span class="s1">  $$\left(1 - \frac{-1}</span><span class="si">{2}</span><span class="s1">\right)\textsf</span><span class="si">{f2l}</span><span class="s1">(1) = \textsf{</span><span class="si">%s</span><span class="s1">}$$&#39;</span> 
+<span class="s1">  $$\left(1 - \frac{-1}</span><span class="si">{2}</span><span class="s1">\right)\textsf</span><span class="si">{f2l}</span><span class="s1">(1) = \textsf{</span><span class="si">%s</span><span class="s1">}$$&#39;</span>
               <span class="o">%</span> <span class="nb">hex</span><span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">f2l</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)))</span>
 
 <span class="n">hide_code_in_slideshow</span><span class="p">()</span>
@@ -21894,7 +21903,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -22019,9 +22028,9 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
     <span class="n">handles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
     <span class="c1"># axarr[key].set_title(r&#39;For slope C = $%s$, ${\rm foobar}_{M,%s}(x)$&#39; % (C, C))</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="n">handles</span><span class="p">,</span> 
+        <span class="n">handles</span><span class="p">,</span>
         <span class="p">[</span>
-            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span> 
+            <span class="s1">r&#39;$x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">,</span>
             <span class="s1">r&#39;$M^* = $ </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">hex</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">C</span> <span class="o">*</span> <span class="n">sharp</span><span class="p">(</span><span class="mi">1</span><span class="p">))),</span>
         <span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
@@ -22048,7 +22057,7 @@ For the inverse square-root, its magical constant should be   $$\left(1 - \frac{
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -22784,7 +22793,7 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
     <span class="n">handle</span><span class="p">,</span> <span class="o">=</span> <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">C</span> <span class="o">-</span> <span class="n">baz</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="n">C</span><span class="p">));</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">r&#39;Relative error for $x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">)</span>
     <span class="n">axarr</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-        <span class="p">[</span><span class="n">handle</span><span class="p">],</span> 
+        <span class="p">[</span><span class="n">handle</span><span class="p">],</span>
         <span class="p">[</span><span class="s1">r&#39;Relative error for $x^{</span><span class="si">%s</span><span class="s1">}$&#39;</span> <span class="o">%</span> <span class="n">C</span><span class="p">])</span>
 
 <span class="n">hide_code_in_slideshow</span><span class="p">()</span>
@@ -22810,7 +22819,7 @@ GGPK5P8B+bWxlEhNBTYAAAAASUVORK5CYII=
         color: #FFFFFF !important;
     }
     </style>
-    
+
 </div>
 
 </div>
@@ -23615,8 +23624,8 @@ RU5ErkJggg==
 &lt;pre id=&quot;wee&quot; class=&quot;language-c cm-s-ipython highlight&quot;&gt;
 // For x^(-0.5)
 float qpow(float x) {
-  long i  = * ( long * ) &amp;x;                  
-  i  = 0x5f400000 + -0.5 * i;               
+  long i  = * ( long * ) &amp;x;
+  i  = 0x5f400000 + -0.5 * i;
   return * ( float * ) &amp;i;
 }
 &lt;/pre&gt;
@@ -23634,7 +23643,7 @@ float qpow(float x) {
         hljs.configure({
           classPrefix: &#39;cm-&#39;     // don&#39;t append class prefix
         });
-            
+
         $(&#39;#wee&#39;).each(function(i, block) {
           hljs.highlightBlock(block);
         });
@@ -23651,7 +23660,7 @@ float qpow(float x) {
             });
         });
     });
-    
+
 &lt;/script&gt;
 </pre></div>
 
@@ -23705,8 +23714,8 @@ float qpow(float x) {
 <pre id="wee" class="language-c cm-s-ipython highlight">
 // For x^(-0.5)
 float qpow(float x) {
-  long i  = * ( long * ) &x;                  
-  i  = 0x5f400000 + -0.5 * i;               
+  long i  = * ( long * ) &x;
+  i  = 0x5f400000 + -0.5 * i;
   return * ( float * ) &i;
 }
 </pre>
@@ -23724,7 +23733,7 @@ float qpow(float x) {
         hljs.configure({
           classPrefix: 'cm-'     // don't append class prefix
         });
-            
+
         $('#wee').each(function(i, block) {
           hljs.highlightBlock(block);
         });
@@ -23741,7 +23750,7 @@ float qpow(float x) {
             });
         });
     });
-    
+
 </script>
 </div>
 
